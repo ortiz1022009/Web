@@ -1,0 +1,44 @@
+/* Estilos de la web. Cambia los colores en :root y todo sigue. */
+:root {
+  --fondo: #f7f4ee; --texto: #1c2126; --suave: #6b6f76; --tarjeta: #ffffff;
+  --acento: #c2571a; --acento-texto: #ffffff; --borde: #e3ded4; --radio: 12px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fondo: #15181b; --texto: #f2ebdd; --suave: #a7a9ad; --tarjeta: #1f2429; --borde: #2c3238; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+img { max-width: 100%; height: auto; display: block; border-radius: var(--radio); }
+a { color: var(--acento); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
+.cabecera { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--fondo); background: color-mix(in srgb, var(--fondo) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--borde); }
+.marca { font-weight: 700; text-decoration: none; color: inherit; margin-right: auto; }
+.menu { display: flex; gap: 14px; }
+.menu a { text-decoration: none; color: inherit; opacity: .85; }
+.menu-boton { display: none; background: none; border: 0; font-size: 22px; color: inherit; }
+@media (max-width: 640px) {
+  .menu-boton { display: block; }
+  .menu { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; padding: 12px 16px; background: var(--fondo); border-bottom: 1px solid var(--borde); }
+  .menu.abierto { display: flex; }
+}
+main { width: min(1040px, 100%); margin: 0 auto; }
+.bloque { padding: 32px 16px; }
+.portada { position: relative; }
+.portada img { border-radius: 0; aspect-ratio: 2 / 1; object-fit: cover; width: 100%; }
+.portada-texto { padding: 24px 16px; }
+.portada-texto h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+.boton { display: inline-block; padding: 10px 18px; border: 0; border-radius: 999px; background: var(--acento); color: var(--acento-texto); text-decoration: none; font-weight: 600; cursor: pointer; }
+.rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.tarjeta { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--radio); padding: 14px; }
+.tarjeta img { margin-bottom: 10px; aspect-ratio: 4 / 3; object-fit: cover; }
+.precio { font-weight: 700; color: var(--acento); }
+.nota, .fecha { color: var(--suave); font-size: .9rem; }
+figure { margin: 0; }
+figcaption { color: var(--suave); font-size: .9rem; padding: 6px 2px; }
+.formulario { display: grid; gap: 12px; max-width: 480px; }
+.formulario label { display: grid; gap: 4px; font-weight: 600; }
+.formulario input, .formulario textarea, .barra-busqueda input, .barra-busqueda select, .fila input { font: inherit; padding: 10px 12px; border: 1px solid var(--borde); border-radius: 8px; background: var(--tarjeta); color: inherit; }
+.pie { text-align: center; padding: 28px 16px; color: var(--suave); font-size: .9rem; border-top: 1px solid var(--borde); margin-top: 24px; }
+
