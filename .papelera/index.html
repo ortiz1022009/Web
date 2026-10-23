@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title></title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="cabecera">
+  <a class="marca" href="index.html"></a>
+  <button class="menu-boton" aria-label="Menú" aria-expanded="false">☰</button>
+  <nav class="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio" class="portada">
+    <img src="imagenes/portada.svg" alt="Imagen de portada" width="1200" height="600">
+    <div class="portada-texto">
+      <h1></h1>
+      <p>Cuenta en una frase de qué va esta página.</p>
+      <a class="boton" href="#contacto">Escríbeme</a>
+    </div>
+  </section>
+  <section id="sobre" class="bloque">
+    <h2>Sobre</h2>
+    <p>Aquí va una presentación corta. Pídele al agente que la escriba por ti o edítala desde Archivos.</p>
+  </section>
+  <section id="galeria" class="bloque">
+    <h2>Galería</h2>
+    <div class="rejilla">
+      <figure><img src="imagenes/muestra-1.svg" alt="Muestra 1" loading="lazy"><figcaption>Muestra 1</figcaption></figure>
+      <figure><img src="imagenes/muestra-2.svg" alt="Muestra 2" loading="lazy"><figcaption>Muestra 2</figcaption></figure>
+      <figure><img src="imagenes/muestra-3.svg" alt="Muestra 3" loading="lazy"><figcaption>Muestra 3</figcaption></figure>
+    </div>
+  </section>
+  <section id="contacto" class="bloque">
+    <h2>Contacto</h2>
+    <p><a class="boton" href="mailto:correo@ejemplo.com">Enviar un correo</a></p>
+  </section>
+</main>
+<footer class="pie"><p>© <span data-anio></span>  · Hecho con Hefesto</p></footer>
+<script src="js/app.js"></script>
+</body>
+</html>
